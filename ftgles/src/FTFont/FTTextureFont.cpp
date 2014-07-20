@@ -251,7 +251,7 @@ inline FTPoint FTTextureFontImpl::RenderI(const T* string, const int len,
 }
 
 
-void FTTextureFontImpl::SetColor(GLfloat colors[4]) 
+void FTTextureFontImpl::SetColor(GLfloat[4] colors) 
 {
     fontColors = colors;
 }
