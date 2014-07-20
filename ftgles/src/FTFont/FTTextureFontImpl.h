@@ -68,7 +68,7 @@ class FTTextureFontImpl : public FTFontImpl
 	
 	void PostRender();
     
-    virtual SetColor(GLfloat colors[4]);    
+    void SetColor(GLfloat colors[4]);    
 
     private:
         /**
