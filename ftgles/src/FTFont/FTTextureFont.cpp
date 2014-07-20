@@ -250,12 +250,6 @@ inline FTPoint FTTextureFontImpl::RenderI(const T* string, const int len,
     return tmp;
 }
 
-
-void FTTextureFontImpl::SetColor(GLfloat[4] colors) 
-{
-    fontColors = colors;
-}
-
 void FTTextureFontImpl::PreRender() 
 {
 	disableTexture2D = false;

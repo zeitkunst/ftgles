@@ -92,10 +92,11 @@ class FTFontImpl
         virtual FTPoint Render(const wchar_t *s, const int len,
                                FTPoint, FTPoint, int);
 
-	virtual void PreRender() {}
+	    virtual void PreRender() {}
 	
-	
-virtual	void PostRender() {}
+        virtual	void PostRender() {}
+
+        virtual void SetColor(GLfloat colors[4]) {}
 	
         /**
          * Current face object

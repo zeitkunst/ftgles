@@ -181,6 +181,8 @@ void FTFont::PreRender() { impl->PreRender(); }
 
 void FTFont::PostRender() { impl->PostRender(); }
 
+void FTFont::SetColor(GLfloat colors[4]) { impl->SetColor(colors[4]); }
+
 
 
 float FTFont::Advance(const char * string, const int len, FTPoint spacing)

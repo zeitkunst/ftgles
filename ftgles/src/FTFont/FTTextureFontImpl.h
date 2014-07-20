@@ -68,8 +68,6 @@ class FTTextureFontImpl : public FTFontImpl
 	
 	void PostRender();
     
-    void SetColor(GLfloat colors[4]);    
-
     private:
         /**
          * Create an FTTextureGlyph object for the base class.
