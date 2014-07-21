@@ -28,6 +28,7 @@
 #define __FTFontImpl__
 
 #include "FTGL/ftgles.h"
+#include "FTInternals.h"
 
 #include "FTFace.h"
 
@@ -60,6 +61,8 @@ class FTFontImpl
         virtual FT_Encoding* CharMapList();
 
         virtual void UseDisplayList(bool useList);
+
+        virtual void SetColor(float r, float g, float b, float a);
 
         virtual float Ascender() const;
 
@@ -96,8 +99,7 @@ class FTFontImpl
 	
         virtual	void PostRender() {}
 
-        virtual void SetColor(GLfloat colors[4]) {}
-	
+
         /**
          * Current face object
          */
@@ -114,6 +116,11 @@ class FTFontImpl
          * <code>false</code> turns OFF display lists.
          */
         bool useDisplayLists;
+
+        /**
+         * Color of the current font
+         */
+	    GLfloat fontColors[4];
 
         /**
          * The default glyph loading flags.

@@ -250,6 +250,7 @@ inline FTPoint FTTextureFontImpl::RenderI(const T* string, const int len,
     return tmp;
 }
 
+
 void FTTextureFontImpl::PreRender() 
 {
 	disableTexture2D = false;
@@ -282,7 +283,8 @@ void FTTextureFontImpl::PreRender()
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 #ifdef FTGLES2
     //colors[0] = 1.0f; colors[1] = 1.0f; colors[2] = 1.0f; colors[3] = 1.0f;
-    colors = fontColors;
+    for (int i = 0; i < 4; i++)
+        colors[i] = fontColors[i];
 #else
 	glGetFloatv(GL_CURRENT_COLOR, colors);
 #endif

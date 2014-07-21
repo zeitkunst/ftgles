@@ -65,8 +65,8 @@ class FTTextureFontImpl : public FTFontImpl
 
 	void PreRender();
 	
-	
 	void PostRender();
+
     
     private:
         /**
@@ -108,11 +108,6 @@ class FTTextureFontImpl : public FTFontImpl
          * The minimum texture height required to hold the glyphs
          */
         GLsizei textureHeight;
-
-        /**
-         * Color of the current font
-         */
-	    GLfloat fontColors[4];
 
         /**
          *An array of texture ids

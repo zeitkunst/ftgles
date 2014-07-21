@@ -142,6 +142,11 @@ void FTFont::UseDisplayList(bool useList)
     return impl->UseDisplayList(useList);
 }
 
+void FTFont::SetColor(float r, float g, float b, float a)
+{
+    return impl->SetColor(r, g, b, a);
+}
+
 
 float FTFont::Ascender() const
 {
@@ -180,9 +185,6 @@ void FTFont::PreRender() { impl->PreRender(); }
 
 
 void FTFont::PostRender() { impl->PostRender(); }
-
-void FTFont::SetColor(GLfloat colors[4]) { impl->SetColor(colors[4]); }
-
 
 
 float FTFont::Advance(const char * string, const int len, FTPoint spacing)
@@ -366,6 +368,14 @@ void FTFontImpl::UseDisplayList(bool useList)
 }
 
 
+void FTFontImpl::SetColor(float r, float g, float b, float a) {
+    fontColors[0] = r;
+    fontColors[1] = g;
+    fontColors[2] = b;
+    fontColors[3] = a;
+}
+
+
 float FTFontImpl::Ascender() const
 {
     return charSize.Ascender();
@@ -528,7 +538,6 @@ FTPoint FTFontImpl::Render(const wchar_t * string, const int len,
 {
     return RenderI(string, len, position, spacing, renderMode);
 }
-
 
 bool FTFontImpl::CheckGlyph(const unsigned int characterCode)
 {

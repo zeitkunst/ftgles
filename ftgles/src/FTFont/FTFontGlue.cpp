@@ -180,6 +180,11 @@ C_FUN(void, ftglSetFontOutset, (FTGLfont *f, float front, float back),
 C_FUN(void, ftglSetFontDisplayList, (FTGLfont *f, int l),
       return, UseDisplayList, (l != 0));
 
+// void FTFont::SetColor(float r, float g, float b, float a);
+C_FUN(void, ftglSetFontColor, (FTGLfont *f, float r, float g, float b, float a),
+      return, SetColor, (r, g, b, a >  0));
+
+
 // float FTFont::Ascender() const;
 C_FUN(float, ftglGetFontAscender, (FTGLfont *f), return 0.f, Ascender, ());
 
