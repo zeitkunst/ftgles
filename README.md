@@ -1,3 +1,7 @@
+# FORK NOTE
+
+This is a fork of https://github.com/cdave1/ftgles to enable the setting of the font color on the Raspberry Pi. When using the original code and OpenFrameworks, the font color does not change when you call ofSetColor due an unimplemented OpenGL function. This additional method, `SetColor`, enables the font color to be set before rendering.
+
 # IMPORTANT NOTE
 
 This is an experimental version of the FTGLES library for OpenGL ES 2.0.  Use at your own risk, as the library is subject to change.
